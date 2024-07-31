@@ -1,10 +1,8 @@
 import AlienController from "./AlienController.js";
 import Ship from "./ship.js";
 import BulletController from "./BulletControler.js";
-
 const canvas = document.getElementById('game');
 const ctx = canvas.getContext('2d');
-
 let ship;
 let shipBulletController;
 let alienBulletController;
@@ -13,10 +11,8 @@ let background;
 let finito = false;
 let champion = false;
 let gameLoopInterval;
-
 // Call init when the window loads
 window.onload = init;
-
 function init() {
     // Set up canvas
     canvas.width = 600;
@@ -61,8 +57,7 @@ function game() {
 function displayFinito() {
     if(finito){
         let text = champion ? "campeon del mundo" : "sombre loser";
-        ctx.fillStyle = "white";
-        
+        ctx.fillStyle = "white";    
         // Ajuster la taille de la police en fonction du texte
         let fontSize = champion ? 50 : 70;
         ctx.font = fontSize + "px Arial";
